@@ -42,7 +42,7 @@ def get_all():
         output.append(currSong)
     return jsonify(output)
 
-# curl http://localhost:5000/songs -X POST
+# curl http://localhost:5000/songs -X GET
 
 @app.route('/songs/<song_id>', methods=['GET'])
 def fetch(song_id):
@@ -57,7 +57,7 @@ def fetch(song_id):
     output.append(currSong)
     return jsonify(output)
 
-# curl http://localhost:5000/songs/1 -X POST
+# curl http://localhost:5000/songs/1 -X GET
 
 @app.route('/songs', methods=['POST'])
 def add():
