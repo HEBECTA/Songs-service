@@ -1,46 +1,46 @@
 # Songs-service
 
-// Sukurti image "songs-image"
-docker build -t songs-image .
+// Sukurti image "songs-image" <br>
+docker build -t songs-image . <br>
 
-// Paleisti image "songs-image" per porta 5000, (sukuria container "songs-container")
-docker run --name songs-container -p 5000:5000 songs-image
+// Paleisti image "songs-image" per porta 5000, (sukuria container "songs-container") <br>
+docker run --name songs-container -p 5000:5000 songs-image <br>
 
-// Pakartotinai (pries tai isjungus) paleisti container "songs-container"
-docker start songs-container
+// Pakartotinai (pries tai isjungus) paleisti container "songs-container" <br>
+docker start songs-container <br>
 
-Servisas pasiekiamas adresu localhost:5000
+Servisas pasiekiamas adresu localhost:5000 <br>
 
-Serviso aptarnaujami resursai - songs.
+Serviso aptarnaujami resursai - songs. <br>
 
-SONG DATA STRUCTURE:
+SONG DATA STRUCTURE: <br>
 
-id - unique number
-artist - artist name
-name - song name
-date_created - release date
-link - youtube url
+id - unique number <br>
+artist - artist name <br>
+name - song name <br>
+date_created - release date <br>
+link - youtube url <br>
 
-RESTFUL API:
+RESTFUL API: <br>
 
-(curl - command-line tool for transferring data using various network protocols)
+(curl - command-line tool for transferring data using various network protocols) <br>
 
-(READ ALL)
-GET http://localhost:5000/songs
-pvz: curl http://localhost:5000/songs -X GET
+(READ ALL) <br>
+GET http://localhost:5000/songs <br>
+pvz: curl http://localhost:5000/songs -X GET <br>
 
-(READ)
-GET http://localhost:5000/songs/<songs_id>
-pvz: curl http://localhost:5000/songs/1 -X GET
+(READ) <br>
+GET http://localhost:5000/songs/<songs_id> <br>
+pvz: curl http://localhost:5000/songs/1 -X GET <br>
 
-(ADD)
-POST http://localhost:5000/songs
-pvz: curl http://localhost:5000/songs -d '{"name":"daina", "artist":"muzikantas", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X POST
+(ADD) <br>
+POST http://localhost:5000/songs <br>
+pvz: curl http://localhost:5000/songs -d '{"name":"daina", "artist":"muzikantas", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X POST <br>
 
-(REMOVE)
-DELETE http://localhost:5000/songs/<songs_id>
-pvz: curl http://localhost:5000/songs/12 -X DELETE
+(REMOVE) <br>
+DELETE http://localhost:5000/songs/<songs_id> <br>
+pvz: curl http://localhost:5000/songs/12 -X DELETE <br>
 
-(UPDATE)
-PUT http://localhost:5000/songs/<songs_id>
+(UPDATE) <br>
+PUT http://localhost:5000/songs/<songs_id> <br>
 curl http://localhost:5000/songs/<12> -d '{"name":"daina2", "artist":"muzikantas2", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X PUT
