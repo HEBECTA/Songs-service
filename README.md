@@ -9,9 +9,7 @@ docker run --name songs-container -p 5000:5000 songs-image <br>
 // Pakartotinai paleisti container "songs-container" <br>
 docker start songs-container <br>
 
-Servisas pasiekiamas adresu localhost:5000 <br>
-
-Restful adresas localhost:5000/songs <br>
+Restful serviso adresas localhost:5000/songs <br>
 
 Front end adresas localhost:5000 <br>
 
