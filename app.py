@@ -66,7 +66,11 @@ def add_song():
     song = Songs(artist=songData['artist'], name=songData['name'], date_created=date, link=songData['link'])
     db.session.add(song)
     db.session.commit()
-    return jsonify(songData)
+    resp = make_response()
+    resp = jsonify(songData)
+    resp.status_code = 201
+    resp.headers['Content-Location'] = f'http://localhost:5000/songs/{song.id}'
+    return resp
 
 # curl http://localhost:5000/songs -d '{"name":"daina", "artist":"muzikantas", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X POST
 
