@@ -18,13 +18,13 @@ Front end adresas localhost:5000 <br>
 Serviso aptarnaujami resursai - songs. <br>
 
 SONG DATA STRUCTURE: <br>
-
-id - unique identification number <br>
-artist - artist name <br>
-name - song name <br>
-date_created - release date <br>
-link - youtube url <br>
-
+{
+  "id" : "<unique identification number>", <br>
+  "artist" : "<artist name>", <br>
+  "name" : "<song name>", <br>
+  "date_created" : "<release date>", <br>
+  "link" : "<youtube url>" <br>
+}
 
 RESTFUL API: <br>
 
