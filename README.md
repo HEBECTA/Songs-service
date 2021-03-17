@@ -15,7 +15,7 @@ Serviso aptarnaujami resursai - songs. <br>
 
 SONG DATA STRUCTURE: <br>
 
-id - unique number <br>
+id - unique identification number <br>
 artist - artist name <br>
 name - song name <br>
 date_created - release date <br>
