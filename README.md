@@ -6,7 +6,7 @@ docker build -t songs-image . <br>
 // Paleisti image "songs-image" per porta 5000, (sukuria container "songs-container") <br>
 docker run --name songs-container -p 5000:5000 songs-image <br>
 
-// Pakartotinai (pries tai isjungus) paleisti container "songs-container" <br>
+// Pakartotinai paleisti container "songs-container" <br>
 docker start songs-container <br>
 
 Servisas pasiekiamas adresu localhost:5000 <br>
