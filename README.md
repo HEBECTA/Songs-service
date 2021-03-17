@@ -38,7 +38,7 @@ pvz: curl http://localhost:5000/songs/1 -X GET <br>
 
 (ADD) <br>
 POST http://localhost:5000/songs <br>
-pvz: curl http://localhost:5000/songs -d '{"name":"daina", "artist":"muzikantas", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X POST <br>
+pvz: curl http://localhost:5000/songs -d '{"name":"daina", "artist":"muzikantas", "date_created":"2018-02-03", "link":"https://www.google.com"}' -H "Content-Type: application/json" -X POST <br>
 
 (REMOVE) <br>
 DELETE http://localhost:5000/songs/<songs_id> <br>
@@ -46,4 +46,4 @@ pvz: curl http://localhost:5000/songs/12 -X DELETE <br>
 
 (UPDATE) <br>
 PUT http://localhost:5000/songs/<songs_id> <br>
-curl http://localhost:5000/songs/<12> -d '{"name":"daina2", "artist":"muzikantas2", "date_created":"2018-02-03", "link":"www.google.com"}' -H "Content-Type: application/json" -X PUT
+curl http://localhost:5000/songs/<12> -d '{"name":"daina2", "artist":"muzikantas2", "date_created":"2018-02-03", "link":"htpps://www.google.com"}' -H "Content-Type: application/json" -X PUT
